@@ -1,2 +1,2 @@
 # CineMagic
-pagina de stream
+Realizada por Santiago Mamani
