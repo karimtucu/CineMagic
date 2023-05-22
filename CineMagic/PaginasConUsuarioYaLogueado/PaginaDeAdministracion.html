@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../img/RecursosDeImagenes-PaginaPrincipal/Logo-cinemagic.ico">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="../css/styleAdministracion.css">
+	<link rel="stylesheet" href="../css/estilos.css">
+	<link rel="stylesheet" href="../css/styleregister.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<title>CineMagic</title>
+</head>
+<body>
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">CineMagic</h2>
+			<nav>
+				<a href="./indexUsurio.html">Inicio</a>
+				<a href="./ErrorPeliculasUsuarios.html">Peliculas</a>
+				<a href="./Error404Usuario.html">Mas Reciente</a>
+				<a href="./PaginaDeAdministracion.html" class="activo" >Administracion</a>
+				<a href="./AcerdaDeElCreadorUsuario.html">Acerca De Nosotros</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div id="container">
+			<h1>Administra tus Películas/Series</h1>
+			<div id="input-container">
+			  <select id="name-input">
+				<option value="65">65</option>
+				<option value="John Wick: Capítulo 3 - Parabellum">John Wick: Capítulo 3 - Parabellum</option>
+				<option value="Siete reyes deben morir">Siete reyes deben morir</option>
+				<option value="Fast & Furious X">Fast & Furious X</option>
+				<option value="Fast & Furious 9">Fast & Furious 9</option>
+				<option value="El piloto">El piloto</option>
+				<option value="Dos pecadoras y una mula">Dos pecadoras y una mula</option>
+				<option value="Top Gun: Maverick">Top Gun: Maverick</option>
+				<option value="La madre">La madre</option>
+				<option value="Guardianes de la Noche: Tren infinito">Guardianes de la Noche: Tren infinito</option>
+				<option value="Peter Pan & Wendy">Peter Pan & Wendy</option>
+				<option value="Los Caballeros del Zodíaco">Los Caballeros del Zodíaco</option>
+				<option value="Maggie Simpson en Casi Rogue One">Maggie Simpson en Casi Rogue One</option>
+				<option value="Súper Mario Bros. La película">Súper Mario Bros. La película</option>
+				<option value="La sirenita">La sirenita</option>
+				<option value="El Gato con Botas: El último deseo">El Gato con Botas: El último deseo</option>
+				<option value="¡Shazam! La furia de los dioses">¡Shazam! La furia de los dioses</option>
+				<option value="Las momias y el anillo perdido">Las momias y el anillo perdido</option>
+				<option value="Géminis: El planeta oscuro">Géminis: El planeta oscuro</option>
+				<option value="Guardianes de la galaxia">Guardianes de la galaxia</option>
+				<option value="Guardianes de la Galaxia vol. 2">Guardianes de la Galaxia vol. 2</option>
+				<option value="Guardianes de la Galaxia: Volumen 3">Guardianes de la Galaxia: Volumen 3</option>
+				<option value="Dungeons & Dragons">Dungeons & Dragons</option>
+				<option value="Doctor Strange en el multiverso">Doctor Strange en el multiverso</option>
+				<option value="Avatar: El sentido del agua">Avatar: El sentido del agua</option>
+				<option value="Ant-Man y la Avispa: Quantumanía">Ant-Man y la Avispa: Quantumanía</option>
+				<option value="Black Panther: Wakanda Forever">Black Panther: Wakanda Forever</option>
+				<option value="El exorcista del papa">El exorcista del papa</option>
+				<option value="Vértigo">Vértigo</option>
+				<option value="Terrifier 2">Terrifier 2</option>
+				<option value="Megan">Megan</option>
+				<option value="Posesión infernal: El despertar">Posesión infernal: El despertar</option>
+				<option value="Llaman a la puerta">Llaman a la puerta</option>
+				<option value="La Exorcista">La Exorcista</option>
+				<option value="Cazadores de tormentas">Cazadores de tormentas</option>
+				<option value="Cráter: Un viaje inolvidable">Cráter: Un viaje inolvidable</option>
+				<!-- Agregar más opciones de películas -->
+			  </select>
+			  <select id="category-input">
+				<option value="Accion">Accion</option>
+				<option value="Animada">Animada</option>
+				<option value="Ciencia ficcion">Ciencia ficcion</option>
+				<option value="Terror">Terror</option>
+				<option value="Drama">Drama</option>
+			  </select>
+			  <input type="text" id="description-input" placeholder="Descripción">
+			  <button id="add-btn">Añadir</button>
+			</div>
+			<table>
+			  <thead>
+				<tr>
+				  <th>ID</th>
+				  <th>Nombre</th>
+				  <th>Categoría</th>
+				  <th>Descripción</th>
+				  <th>Acciones</th>
+				</tr>
+			  </thead>
+			  <tbody id="table-body"></tbody>
+			</table>
+			<div id="update-container">
+			  <select id="update-name-input">
+				<option value="65">65</option>
+				<option value="John Wick: Capítulo 3 - Parabellum">John Wick: Capítulo 3 - Parabellum</option>
+				<option value="Siete reyes deben morir">Siete reyes deben morir</option>
+				<option value="Fast & Furious X">Fast & Furious X</option>
+				<option value="Fast & Furious 9">Fast & Furious 9</option>
+				<option value="El piloto">El piloto</option>
+				<option value="Dos pecadoras y una mula">Dos pecadoras y una mula</option>
+				<option value="Top Gun: Maverick">Top Gun: Maverick</option>
+				<option value="La madre">La madre</option>
+				<option value="Guardianes de la Noche: Tren infinito">Guardianes de la Noche: Tren infinito</option>
+				<option value="Peter Pan & Wendy">Peter Pan & Wendy</option>
+				<option value="Los Caballeros del Zodíaco">Los Caballeros del Zodíaco</option>
+				<option value="Maggie Simpson en Casi Rogue One">Maggie Simpson en Casi Rogue One</option>
+				<option value="Súper Mario Bros. La película">Súper Mario Bros. La película</option>
+				<option value="La sirenita">La sirenita</option>
+				<option value="El Gato con Botas: El último deseo">El Gato con Botas: El último deseo</option>
+				<option value="¡Shazam! La furia de los dioses">¡Shazam! La furia de los dioses</option>
+				<option value="Las momias y el anillo perdido">Las momias y el anillo perdido</option>
+				<option value="Géminis: El planeta oscuro">Géminis: El planeta oscuro</option>
+				<option value="Guardianes de la galaxia">Guardianes de la galaxia</option>
+				<option value="Guardianes de la Galaxia vol. 2">Guardianes de la Galaxia vol. 2</option>
+				<option value="Guardianes de la Galaxia: Volumen 3">Guardianes de la Galaxia: Volumen 3</option>
+				<option value="Dungeons & Dragons">Dungeons & Dragons</option>
+				<option value="Doctor Strange en el multiverso">Doctor Strange en el multiverso</option>
+				<option value="Avatar: El sentido del agua">Avatar: El sentido del agua</option>
+				<option value="Ant-Man y la Avispa: Quantumanía">Ant-Man y la Avispa: Quantumanía</option>
+				<option value="Black Panther: Wakanda Forever">Black Panther: Wakanda Forever</option>
+				<option value="El exorcista del papa">El exorcista del papa</option>
+				<option value="Vértigo">Vértigo</option>
+				<option value="Terrifier 2">Terrifier 2</option>
+				<option value="Megan">Megan</option>
+				<option value="Posesión infernal: El despertar">Posesión infernal: El despertar</option>
+				<option value="Llaman a la puerta">Llaman a la puerta</option>
+				<option value="La Exorcista">La Exorcista</option>
+				<option value="Cazadores de tormentas">Cazadores de tormentas</option>
+				<option value="Cráter: Un viaje inolvidable">Cráter: Un viaje inolvidable</option>
+			  </select>
+			  <select id="update-category-input">
+				<option value="Accion">Accion</option>
+				<option value="Animada">Animada</option>
+				<option value="Ciencia ficcion">Ciencia ficcion</option>
+				<option value="Terror">Terror</option>
+				<option value="Drama">Drama</option>
+			  </select>
+			  <input type="text" id="update-description-input">
+			  <button id="update-btn">Actualizar</button>
+			  <button id="cancel-btn">Cancelar</button>
+			</div>
+		  </div>		  
+	</main>
+	<!----footer-->
+	<footer>
+		<div class="footer-container">
+			<div class="footer-content-container">
+				<h3 class="website-logo">CineMagic</h3>
+				<span class="footer-info">0800 888 0999</span>
+				<span class="footer-info">CineMagic@gmail.com</span>
+			</div>
+			<div class="footer-menus">
+				<div class="footer-content-container">
+					<span class="menu-title">menu</span>
+					<a href="./indexUsurio.html" class="menu-item-footer">Inicio</a>
+					<a href="./../index.html" class="menu-item-footer" id="logout">Cerrar Cuenta</a>
+					<a href="./ContactoUsuario.html" class="menu-item-footer">Contactanos</a>
+				</div>
+				<div class="footer-content-container">
+					<span class="menu-title">legal</span>
+					<a href="./Error404Usuario.html" class="menu-item-footer">Privacy Policy</a>
+					<a href="./Error404Usuario.html" class="menu-item-footer">Cookies</a>
+					<a href="./Error404Usuario.html" class="menu-item-footer">Legal</a>
+				</div>
+			</div>
+
+			<div class="footer-content-container">
+				<span class="menu-title">Nuestras Redes</span>
+				<div class="social-container">
+					<a href="./ErrorRedesUsuario.html" class="social-link"></a>
+					<a href="./ErrorRedesUsuario.html" class="social-link"></a>
+					<a href="./ErrorRedesUsuario.html" class="social-link"></a>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-container">
+			<span class="copyright">Copyright 2023, CineMagic.com Reservados todos los derechos.</span>
+		</div>
+	</footer>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="../js/PaginaDeAdministracion.js"></script>
+</body>
+</html>

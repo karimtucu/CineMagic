@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  font-family: "lato", sans-serif;
+}
+
+.signupFrm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+
+.form {
+  background-color: #831010;
+  min-width: 388px;
+  max-width: 550px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  
+}
+
+.title {
+  font-size: 50px;
+  margin-bottom: 40px;
+  color: white;
+  text-align: center;
+}
+
+.h4-style {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: white;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+}
+.h4-style-contacto{
+  font-size: 25px;
+  margin-bottom: 5px;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+}
+.form-label {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  appearance: none;
+  border-radius: 0.375rem;
+  outline: none;
+}
+.botton{
+  background: rgba(0,0,0, 0.5);
+	border: none;
+  margin-top: 10px;
+  width: 100%;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-bottom: 0px;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 0.82em;
+}
+.botton:hover{
+  background: #fff;
+	color: #000;
+}
+.title-contacto{
+  font-size: 40px;
+    margin-bottom: 0px;
+    color: white;
+    text-align: center;
+}
+.margin-header{
+  margin-bottom: 40px;
+}
+.margin-footer{
+  margin-top: 70px;
+}
+/*pagina acerca de nosotros*/
+.img-cemter{
+  text-align: center;
+}
+#margin-botton{
+  margin-bottom: 50px;
+}
+#margin-top{
+ margin-top: 60px;
+}
+#margin-top-90{
+  margin-top: 90px;
+}
+#margin-botton-70{
+  margin-bottom: 70px;
+}
